@@ -10,15 +10,11 @@ f = open('%s%slab.html'%(days,months), 'w')
 f.write('<!DOCTYPE html>')
 f.write('\n<html>')
 f.write('\n<head>')
-f.write('\n<style>')
-f.write('\ntable, th, td {')
-f.write('\n    border: 2px solid black;')
-f.write('\n}')
-f.write('\n</style>')
+f.write('\n<link rel="stylesheet" type="text/css" href="ff.css">')
 f.write('\n<body>')
 f.write('\n<h5>Dear Priya,</h5>')
 f.write('\n<h3>La Brioche Quality Check for Products Send on %s/%s/%s</h3>'%(days,months,years))
-f.write('\n<p>During checking of the products of La Brioche outlets for today’s delivery the products were good with some minor issues and instructed  them for replacement and proper checking - pictures of products send are below for your verification. </p>')
+f.write('\n<p>During checking of the products of La Brioche outlets for todayâ€™s delivery the products were good with some minor issues and instructed  them for replacement and proper checking - pictures of products send are below for your verification. </p>')
 f.write('\n<h5>Summary of Products</h5>')
 f.write('\n<table>')
 f.write('\n<tr>Raw Material<tr>')
@@ -28,7 +24,7 @@ f.write('\n<th>Name of Product</th>')
 f.write('\n<th>Picture of Product</th>')
 f.write('\n<th>Quality of Product</th>')
 f.write('\n</tr>')
-for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labraw2108'):
+for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labraw%s%s'%(days,months)):
     for file in files:
         if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
              flet = os.path.join(root, file)
@@ -49,7 +45,7 @@ f.write('\n<th>Picture of Product</th>')
 f.write('\n<th>Quality of Product</th>')
 f.write('\n</tr>')
 sn = 0
-for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labveg2108'):
+for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labveg%s%s'%(days,months)):
     for file in files:
         if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
              flet = os.path.join(root, file)
@@ -71,7 +67,7 @@ f.write('\n<th>Picture of Product</th>')
 f.write('\n<th>Quality of Product</th>')
 f.write('\n</tr>')
 sn = 0
-for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labsal2108'):
+for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labsal%s%s'%(days,months)):
     for file in files:
         if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
              flet = os.path.join(root, file)
@@ -93,7 +89,7 @@ f.write('\n<th>Picture of Product</th>')
 f.write('\n<th>Quality of Product</th>')
 f.write('\n</tr>')
 sn = 0
-for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labfj2108'):
+for root, subdirs, files in os.walk('C:\Users\LEON\Desktop\labfj%s%s'%(days,months)):
     for file in files:
         if os.path.splitext(file)[1].lower() in ('.jpg', '.jpeg'):
              flet = os.path.join(root, file)
